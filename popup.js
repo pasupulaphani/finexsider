@@ -5,9 +5,9 @@
 let illustration = document.getElementById('illustration');
 illustration.innerHTML = "Phani";
 
-chrome.storage.sync.get('color', function(data) {
+chrome.storage.sync.get('zrx1dsell', function(data) {
   // changeColor.setAttribute('value', data.color);
-  illustration.innerHTML = data;
+  illustration.innerHTML = data.zrx1dsell;
 
 });
 
