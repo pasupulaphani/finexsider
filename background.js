@@ -28,10 +28,10 @@ var bkg = chrome.extension.getBackgroundPage();
 chrome.runtime.onInstalled.addListener(function(details) {
   // register callback for alarm
   chrome.alarms.onAlarm.addListener(onAlarm);
-  
+
   // synchronize every 1 minute
   chrome.alarms.create("extension.alarm1", {periodInMinutes: 1});
-  
+
   console.log("extension is running");
  });
 
@@ -40,16 +40,16 @@ function onAlarm(alarm) {
   start();
  };
 
- 
+
 function start() {
   chrome.alarms.create("Start", {periodInMinutes:1});
-
+  let number;
   $.ajax({
-    url: "http://localhost:3000/data",
+    url: "http://172.29.6.34:3000/data",
     dataType : 'json',
     success: function(data) {
       bkg.console.log('data', data);
-
+      number = data;
       const zrx1dsell = data
         .filter(a => {
           return hoursFromNow(a.timeStamp) < 24
@@ -86,9 +86,9 @@ function start() {
 
   chrome.notifications.create({
     type: "basic",
-    title: "onAlarm",
+    title: "Large Tx Report",
     iconUrl: "images/finexsider32.png",
-    message: 'some msg'
+    message: 'USDT:' + number
   });
 }
 start();

@@ -3,17 +3,20 @@
 // let changeColor = document.getElementById('changeColor');
 
 let illustration = document.getElementById('illustration');
-illustration.innerHTML = "Phani";
+let illustration2 = document.getElementById('illustration2');
 
 chrome.storage.sync.get('zrx1dsell', function(data) {
   // changeColor.setAttribute('value', data.color);
-  illustration.innerHTML = data.zrx1dsell;
-
+  illustration.innerHTML = Math.round(data.zrx1dsell);
 });
+chrome.storage.sync.get('zrx1wsell', function(data) {
+  // changeColor.setAttribute('value', data.color);
+  illustration2.innerHTML = Math.round(data.zrx1wsell);
+});
+
 
 changeColor.onclick = function(element) {
   let illustration = document.getElementById('illustration');
-  illustration.innerHTML = "Phani";
 
 
   let color = element.target.value;
