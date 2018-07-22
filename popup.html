@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-        display:inline-block;
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    button {
+      height: 30px;
+      width: 30px;
+      outline: none;
+      display:inline-block;
+    }
+  </style>
 
-      }
+</head>
+<body>
 
-    </style>
-  </head>
-  <body>
-    <button id="changeColor"></button>
-    <button id="token2"></button>
+<div class="container-fluid" style="background-color:lavender;">
+  <h5>Watchlist</h5>
+  <div class="row">
+    <div class="col-xs-4">
+      <button id="changeColor"></button>
+    </div>
+    <div class="col-xs-4">
+      <a href="http://139.59.146.81:8088/#">
+      <img src="./images/eth18.png" alt="">
+      </a>
+    </div>
+  </div>
+</div>
 
-    <script src="popup.js"></script>
+<script src="popup.js"></script>
 
-
-
-  </body>
-
-
+</body>
 </html>
