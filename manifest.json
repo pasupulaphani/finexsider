@@ -2,15 +2,15 @@
   "name": "inexsider",
   "version": "1.0",
   "description": "Watch my token",
-  "permissions": ["tabs", "activeTab", "declarativeContent", "storage"],
+  "permissions": ["notifications", "alarms", "tabs", "activeTab", "declarativeContent", "storage"],
   "options_page": "options.html",
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["moment.min.js", "jquery.min.js", "background.js"],
     "persistent": false
   },
   "options_ui": {
     "page": "options.html",
-    "open_in_tab": false
+    "open_in_tab": true
   },
   "page_action": {
     "default_popup": "popup.html",
