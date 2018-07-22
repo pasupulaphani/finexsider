@@ -43,7 +43,7 @@ function onAlarm(alarm) {
 
 function start() {
   chrome.alarms.create("Start", {periodInMinutes:1});
-  let number;
+  // let number;
   $.ajax({
     url: "http://172.29.6.34:3000/data",
     dataType : 'json',
@@ -78,18 +78,20 @@ function start() {
       }, function() {
         console.log("set", zrx1wsell)
       });
+
+      chrome.notifications.create({
+        type: "basic",
+        title: "Large Tx Report",
+        iconUrl: "images/finexsider32.png",
+        message: 'USDT: ' + zrx1dsell + ", sold"
+      });
     },
     error: function(e) {
       bkg.console.log('e', e);
     }
   });
 
-  chrome.notifications.create({
-    type: "basic",
-    title: "Large Tx Report",
-    iconUrl: "images/finexsider32.png",
-    message: 'USDT:' + number
-  });
+
 }
 start();
 
