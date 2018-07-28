@@ -4,7 +4,7 @@
 
 Watch your fav tokens.
 
-![alt text](https://github.com/pasupulaphani/finexsider/blob/master/meta/visual_v1.png){:height="20%" width="20%"}
+Here is a [screenshot of extension as of today](https://github.com/pasupulaphani/finexsider/blob/master/meta/visual_v1.png) .
 
 Feedback & suggestions very welcome.
 
