@@ -17,66 +17,114 @@
     body {
       width: 320px;
     }
+
+    .imgtop {
+      height: 22px;
+      width: 22px;
+    }
+
+    #toprow {
+      margin-top: 10px;
+    }
+
+    .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+      background-color: white;
+    }
+
+    .table > tbody > tr > td {
+       vertical-align: middle;
+    }
+
+
   </style>
 
 </head>
-<body>
+<body style="background-color:lavender;">
 
-<div class="container-fluid" style="background-color:lavender;">
-  <h5>
-      <a  target="_blank" href="http://139.59.146.81:8088/#"><img src="./images/eth18.png" alt=""></a> Last Moves
-  </h5>
-  <div class="row">
-    <!-- <div class="col-xs-4">
-      <button id="changeColor"></button>
-    </div> -->
-    <!-- <div class="col-xs-4">
-      <a href="http://139.59.146.81:8088/#"><img src="./images/eth18.png" alt=""></a>
-    </div> -->
+<div class="container-fluid" >
+
+  <div id = "toprow" style="background-color:white;" class="row">
+    <div class="col-xs-3">
+      <a  target="_blank" href="http://139.59.146.81:8088/#">
+        <img class="imgtop" src="./images/eth18.png" alt="">
+      </a>
+      <img id="plusbutton" class="imgtop" src="./images/plusbutton.png" alt="">
+    </div>
+    <div class="col-xs-6 text-center">
+        <b>InEx Moves</b>
+    </div>
+    <div class="col-xs-3">
+      <img class="imgtop" src="./images/securebutton.png" alt="">
+      <img class="imgtop" src="./images/settingsbutton.png" alt="">
+    </div>
   </div>
 
-  <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Token</th>
-      <th scope="col">24h</th>
-      <th scope="col">1w</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td><img src="./images/zrxToken.png" alt=""></td>
-      <td>123</td>
-      <td>123</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td><img src="./images/avtToken.png" alt=""></td>
-      <td>123</td>
-      <td>123</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td><img src="./images/usdtToken.png" alt=""></td>
-      <td id="illustration"> 888</td>
-      <td id="illustration2"> 888</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td><img src="./images/ethToken.png" alt=""></td>
-      <td>123</td>
-      <td>123</td>
-    </tr>
-  </tbody>
-</table>
+<!-- TABLE -->
 
+<div class="row">
+  <table id="mainTable" class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Token</th>
+        <th scope="col">24h</th>
+        <th scope="col">1w</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><img src="./images/zrxToken.png" alt=""></th>
+        <td class = "align-middle">123</td>
+        <td class = "align-bottom">123</td>
+        <td class = "align-middle">123</td>
+      </tr>
+
+      <tr>
+        <th scope="row"><img src="./images/usdtToken.png" alt=""></th>
+        <td class = "align-middle" id="illustration"> 888</td>
+        <td class = "align-middle" id="illustration2"> 888</td>
+        <td class = "align-middle">123</td>
+
+      </tr>
+
+      <tr data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+        <th scope="row"><img src="./images/ethToken.png" alt=""></th>
+        <td class = "align-middle">123</td>
+        <td class = "align-middle">123</td>
+        <td class = "align-middle">123</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+
+<!-- TABLE END -->
+
+<!-- FOOTER -->
+<div class="row text-center" id="footerstatement" style="font-size: 10px;" >
+  This extension tells you whether ICO teams are buying/selling their project's tokens.
+  It also comes with a set of ICO best practices.
+  <br>
+  <a  target="_blank" href="github.com/#">
+    Learn more
+  </a>
+  /
+  <a  target="_blank" href="github.com/#">
+    Contribute
+  </a>
+  .
+</div>
+<!-- FOOTER END -->
 
 <script src="popup.js"></script>
 
 <script src="jquery.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+  console.log("hi")
+</script>
+
 
 </body>
 </html>
