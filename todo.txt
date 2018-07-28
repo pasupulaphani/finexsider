@@ -1,0 +1,11 @@
+Chrome extension - FE:
+- conditional coloring / more informative display for price
+- conditional coloring for volumes
+- alert
+- tooltip with additional details
+- redo icons
+
+Chrome extension - BE:
+
+Others:
+- one pager
