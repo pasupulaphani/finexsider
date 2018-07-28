@@ -4,8 +4,7 @@
 
 Watch your fav tokens.
 
-![alt text](https://ibb.co/hbgA3o)
-
+![alt text](https://docs.gimp.org/2.2/images/tutorials/quickie-scale-example.jpg)
 Feedback & suggestions very welcome.
 
 ---
